@@ -3,7 +3,7 @@ import { Router } from '@angular/router'
 
 @Component({
   selector: 'app-intro',
-  imports: [],
+  standalone:true,
   templateUrl: './intro.html',
   styleUrl: './intro.css'
 })
