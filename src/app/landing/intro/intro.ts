@@ -2,10 +2,8 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-intro',
-  imports: [],
+  standalone: true,
   templateUrl: './intro.html',
-  styleUrl: './intro.css'
+  styleUrls: ['./intro.css'],
 })
-export class Intro {
-
-}
+export class Intro {}

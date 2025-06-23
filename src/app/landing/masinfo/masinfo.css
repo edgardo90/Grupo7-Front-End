@@ -13,7 +13,9 @@
   font-size: 2rem;
   margin-bottom: 1rem;
 }
-
+.masinfo::before {
+  background: rgba(226, 121, 22, 0.6); /* Solo color sin imagen */
+}
 .masinfo p {
   font-size: 1.1rem;
  

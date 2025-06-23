@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-masinfo',
-  imports: [],
+  standalone:true,
   templateUrl: './masinfo.html',
   styleUrl: './masinfo.css'
 })

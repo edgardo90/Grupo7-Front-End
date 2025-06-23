@@ -1,4 +1,18 @@
+/* -------------------------
+   Variables globales
+------------------------- */
+:root {
+  --primary: #3E5F79;
+  --secondary: #92f2ff;
+  --text-color: #333;
+  --background-light: #f5f5f5;
+  --text-dark: #333;
+  --text-light: #fff;
+}
 
+/* -------------------------
+   Reset básico
+------------------------- */
 * {
   box-sizing: border-box;
   margin: 0;
@@ -8,14 +22,30 @@
 html, body {
   margin: 0;
   padding: 0;
-  overflow-x: hidden; 
-  font-family: sans-serif; 
- 
-   scrollbar-width: none; /* Firefox */
+  font-family: 'Roboto', sans-serif;
+  background-color: var(--background-light);
+  color: var(--text-color);
+  overflow-x: hidden;
+  min-height: 100vh;
+
+  /* Scroll invisibles en algunos navegadores */
+  scrollbar-width: none; /* Firefox */
   -ms-overflow-style: none;  /* IE y Edge antiguos */
 }
-
 body::-webkit-scrollbar {
   display: none; /* Chrome, Safari y Edge moderno */
 }
 
+/* -------------------------
+   Layout principal
+------------------------- */
+router-outlet + * {
+  display: block;
+  min-height: calc(100vh - 120px); /* Navbar (60px) + Footer (60px aprox) */
+  padding: 20px;
+}
+
+/* Asegura espacio para navbar fijo */
+body {
+  padding-top: 60px;
+}

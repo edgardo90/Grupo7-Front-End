@@ -1,0 +1,23 @@
+/* Estilos globales */
+:root {
+  --primary-color: #3E5F79;
+  --secondary-color: #92f2ff;
+  --text-color: #333;
+  --light-bg: #f5f5f5;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Arial', sans-serif;
+  color: var(--text-color);
+  background-color: var(--light-bg);
+  padding-top: 60px; /* Espacio para el navbar fijo */
+}
+
+/* Contenedor principal */
+router-outlet + * {
+  display: block;
+  min-height: calc(100vh - 120px); /* Altura menos navbar y footer */
+  padding: 20px;
+}

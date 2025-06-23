@@ -1,0 +1,21 @@
+:root {
+  --primary-color: #3f51b5;  /* Color principal */
+  --secondary-color: #ff4081; /* Color acento */
+  --background-light: #f5f5f5;
+  --text-dark: #333;
+  --text-light: #fff;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', sans-serif;
+  background-color: var(--background-light);
+  color: var(--text-dark);
+  min-height: 100vh;
+}
+
+router-outlet + * {
+  display: block; /* Asegura que el contenido del router se muestre correctamente */
+  padding: 20px;
+}

@@ -11,7 +11,16 @@
   z-index: 100;
   box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
+/* Añade esto al navbar */
+.navbar {
+  /* Tus estilos actuales... */
+  height: 60px; /* Altura fija */
+}
 
+/* Añade margen al body para evitar solapamiento */
+body {
+  margin-top: 60px; /* Igual a la altura del navbar */
+}
 .logo {
   font-weight: bold;
   font-size: 1.5rem;

@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-acerca',
-  imports: [],
+  standalone: true,
   templateUrl: './acerca.html',
   styleUrl: './acerca.css'
 })
