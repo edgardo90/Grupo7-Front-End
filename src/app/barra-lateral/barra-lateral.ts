@@ -3,6 +3,10 @@ import { IUser } from '../interfaces/user'
 import {LoginService} from '../services/login'
 import { RouterLink, Router } from '@angular/router';
 
+
+
+
+
 @Component({
   selector: 'app-barra-lateral',
   standalone: true,
@@ -12,7 +16,7 @@ import { RouterLink, Router } from '@angular/router';
 })
 export class BarraLateral implements OnInit{
 
-  constructor(private loginService: LoginService){
+  constructor(private loginService: LoginService, private router: Router){
 
   }
   user: Partial<IUser> = {};
@@ -25,6 +29,17 @@ export class BarraLateral implements OnInit{
     }
     if (this.loginService.getUserEmail()){
       this.user.email = this.loginService.getUserEmail() as string
+    }
+  }
+
+  logout() {
+    const isConfirm = window.confirm("Quieres cerrar sesion ?");
+    console.log(isConfirm)
+    if (isConfirm) {
+      this.loginService.logoutAndClear();
+      this.router.navigate(['/']).then(() => {
+        location.reload(); // Recarga despues de redirigir
+      })
     }
   }
 }
