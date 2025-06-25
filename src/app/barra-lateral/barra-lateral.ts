@@ -1,13 +1,16 @@
 import { Component,  EventEmitter, OnInit, Output } from '@angular/core';
 import { IUser } from '../interfaces/user'
 import {LoginService} from '../services/login'
-import { Router } from '@angular/router'
+import { RouterLink, Router } from '@angular/router';
+
+
+
 
 
 @Component({
   selector: 'app-barra-lateral',
   standalone: true,
-  imports: [],
+  imports: [RouterLink],
   templateUrl: './barra-lateral.html',
   styleUrl: './barra-lateral.css'
 })
