@@ -4,7 +4,9 @@ import { Login } from './login/login';
 import { Register } from './user/register/register';
 import { PaginaUsuario } from './pagina-usuario/pagina-usuario';
 import { AgregarLibro } from './agregar-libro/agregar-libro';
-import { authGuard } from './auth/auth-guard' // esto me sirve para proteger mis rutas , que se pueda acceder si el usuario esta logueado
+import { authGuard } from './auth/auth-guard'; // esto me sirve para proteger mis rutas , que se pueda acceder si el usuario esta logueado
+import{MisColecciones} from './mis-colecciones/mis-colecciones'
+import { AgregarColeccion } from './agregar-coleccion/agregar-coleccion';
 
 
 
@@ -25,6 +27,16 @@ export const routes: Routes = [
      {
           path: 'usuario/book/:id',
           component: AgregarLibro,
+          canActivate: [authGuard]
+     },
+     {
+          path: 'colecciones',
+          component: MisColecciones,
+          canActivate: [authGuard]
+     },
+     {
+          path: 'crearColeccion',
+          component: AgregarColeccion,
           canActivate: [authGuard]
      }
 ];

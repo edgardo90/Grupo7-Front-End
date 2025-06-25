@@ -7,7 +7,8 @@
   <nav>
     <ul>
       <li (click)="cambiarVista.emit('libros')">Todos mis libros</li>
-      <li (click)="cambiarVista.emit('colecciones')">Colecciones</li>
+      <li>  <a [routerLink]="['/colecciones']" style="cursor: pointer">Mis colecciones</a> </li>
+     
       <li (click)="cambiarVista.emit('configuracion')">Configuración</li>
     </ul>
   </nav>
